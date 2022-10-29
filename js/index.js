@@ -67,13 +67,13 @@ createApp({
     beforeUpdate() { },
     updated() { },
     methods: {
-        resumeProjectDescription(description) {
-            description = description.slice(0, 300)
-            return description
-        },
         resumeCertificationDescription(description) {
             description = description.slice(0, 150)
             return description
+        },
+
+        normalizeArraysText(arrayToNormalize){
+            return arrayToNormalize.toString().replace(/,/g, ", ");
         }
 
     },

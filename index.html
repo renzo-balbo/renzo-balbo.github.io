@@ -24,7 +24,7 @@
             
         </header> -->
 
-        <main class="d-flex flex-wrap justify-content-center">
+        <main class="d-flex flex-wrap justify-content-center gap-4">
 
             <!-- PRESENTATION  -->
             <article class="row justify-content-center col-12">
@@ -37,10 +37,10 @@
                 <<span>projects</span>>
             </h5>
             <!-- CONTENEDOR DE PROYECTOS  -->
-            <section class="row col-10 flex-wrap gap-5">
+            <section class="row col-10 flex-wrap gap-5 projectsContainer">
 
                 <!-- CADA PROYECTO  -->
-                <article v-for="project in projects" class="row col-12 border-top pt-5">
+                <article v-for="project in projects" class="row col-12 pt-3 pb-3 project">
 
                     <!-- DETALLES  -->
                     <div class="d-flex col-7 flex-wrap p-5">
@@ -60,10 +60,10 @@
                         <div>
                             <p>{{project.description}}</p>
                             <p>
-                                Technologies: {{project.technologies}}.</p>
+                                Technologies: {{normalizeArraysText(project.technologies)}}.</p>
                             <p>Released in: {{project.creationDate}}.</p>
                             <p>Development time: {{project.creationTime}}.</p>
-                            <p>Developed by: {{project.creators}}</p>
+                            <p>Developed by: {{normalizeArraysText(project.creators)}}</p>
                         </div>
                     </div>
 
@@ -87,15 +87,34 @@
                 <<span>/projects</span>>
             </h5>
 
-            <!-- EDUCATION  -->
-            <div>
+            <!-- ABOUT  -->
 
-            </div>
+                <h5 class="col-11 tagTitle">
+                    <<span>about</span>>
+                </h5>
+
+                <h5 class="col-11 tagTitle">
+                    <<span>/about</span>>
+                </h5>
+
 
             <!-- CERTIFICATIONS  -->
-            <div>
+            <h5 class="col-11 tagTitle">
+                <<span>certifications</span>>
+            </h5>
 
-            </div>
+            <h5 class="col-11 tagTitle">
+                <<span>/certifications</span>>
+            </h5>
+
+            <!-- CONTACT  -->
+            <h5 class="col-11 tagTitle">
+                <<span>contact</span>>
+            </h5>
+
+            <h5 class="col-11 tagTitle">
+                <<span>/contact</span>>
+            </h5>
 
 
 

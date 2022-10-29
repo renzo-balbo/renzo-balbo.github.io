@@ -5,12 +5,18 @@
 }
 
 body>div{
-    background-color: #1E1E1C;
+    background-color: #333333;
+    
     color: #BDC1C6;
 }
 
 .tagTitle{
     color: #3A6AC8;
+}
+
+.project{
+    background-color: #1E1E1C;
+    border: 5px solid #252525;
 }
 
 .projectTitle{
