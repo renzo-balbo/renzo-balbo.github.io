@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body>div{
+    background-color: #1E1E1C;
+    color: #BDC1C6;
+}
+
+.tagTitle{
+    color: #3A6AC8;
+}
+
+.projectTitle{
+    color: #D0D2C8;
+}
+
+.projectType{
+    color: #446C36;
+}
+
+.exampleDisplays{
+    width: 540px;
+    height: 720px;
+}
+
+.mobileDisplays{
+    height: 400px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.mobileDisplays :first-child{
+    align-self: flex-start;
+}
+
+.mobile1{
+    width: 200px;
+    height: 245px;
+}
+
+.mobile2{
+    width: 120px;
+    height: 245px;
+}
+
+.desktopDisplayExample{
+    width: 230px;
+}
+
+.projectDetailsHead{
+    height: 70px;
+}

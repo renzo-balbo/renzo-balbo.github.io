@@ -4,34 +4,120 @@
 <head>
 
     <meta charset="utf-8" />
-    <title>Renzo Balbo &ndash; Home Page</title>
-    <meta name="description" content="Full Stack Developer Student at MindHub" />
+    <title>RLBP &ndash; Home Page</title>
+    <meta name="description" content="Full Stack Java Developer at MindHub" />
     <meta name="author" content="RLBP" />
     <meta name="generator" content="RLBP" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- BOOTSTRAP  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- CSS  -->
+    <link rel="stylesheet" href="./assets/styles/index.css">
 
 </head>
 
 <body>
+    <div id="app">
 
-    <header>
-        <h1>Renzo Leonardo Balbo Piñero</h1>
-    </header>
+        <!-- <header class="d-flex align-items-center">
+            
+        </header> -->
 
-    <main>
+        <main class="d-flex flex-wrap justify-content-center">
 
-        <img src="https://thumbs.gfycat.com/MelodicUnfinishedAfricancivet-size_restricted.gif" />
+            <!-- PRESENTATION  -->
+            <article class="row justify-content-center col-12">
+                <h1 class="text-center">RLBP &ndash; Renzo Balbo</h1>
+                <p class="text-center">Hey, Renzo here! I'm a Java Full Stack Web Developer & Actor</p>
+            </article>
 
-    </main>
+            <!-- PROJECTS  -->
+            <h5 class="col-11 tagTitle">
+                <<span>projects</span>>
+            </h5>
+            <!-- CONTENEDOR DE PROYECTOS  -->
+            <section class="row col-10 flex-wrap gap-5">
 
-    <footer>
+                <!-- CADA PROYECTO  -->
+                <article v-for="project in projects" class="row col-12 border-top pt-5">
 
-        <address></address>
+                    <!-- DETALLES  -->
+                    <div class="d-flex col-7 flex-wrap p-5">
 
-        <h5>&copy;RLBP 2022</h5>
+                        <!-- NOMBRE Y REPO  -->
+                        <div class="d-flex justify-content-between col-12 projectDetailsHead ">
+                            <div>
+                                <h2 class="projectTitle">{{project.name}}</h2>
+                                <h6 class="projectType">{{project.type}}</h6>
+                            </div>
+                            <div class="d-flex  justify-content-center align-items-center">
+                                <a href="#"><button>GitHub Repository</button></a>
+                            </div>
+                        </div>
 
-    </footer>
+                        <!-- DETALLES  -->
+                        <div>
+                            <p>{{project.description}}</p>
+                            <p>
+                                Technologies: {{project.technologies}}.</p>
+                            <p>Released in: {{project.creationDate}}.</p>
+                            <p>Development time: {{project.creationTime}}.</p>
+                            <p>Developed by: {{project.creators}}</p>
+                        </div>
+                    </div>
+
+                    <!-- IMAGENES  -->
+                    <div class="col-5 exapleDisplays">
+
+                        <div class="mobileDisplays col-12">
+                            <img :src="project.images.mobile1" class="mobile1" alt="">
+
+                            <img :src="project.images.mobile2" class="img-fluid mobile2" alt="">
+                        </div>
+
+                        <img :src="project.images.desktop" class="img-fluid desktopDisplayExample" alt="" width="250">
+                        
+                    </div>
+
+                </article>
+
+            </section>
+            <h5 class="col-11 tagTitle">
+                <<span>/projects</span>>
+            </h5>
+
+            <!-- EDUCATION  -->
+            <div>
+
+            </div>
+
+            <!-- CERTIFICATIONS  -->
+            <div>
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </main>
+
+
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>
