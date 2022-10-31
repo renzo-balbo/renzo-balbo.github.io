@@ -39,12 +39,21 @@ createApp({
             ],
             certifications: [
                 {
+                    id: 3,
+                    name: "Scrum Fundamentals Certified",
+                    issuedBy: "SCRUMstudy",
+                    issuedIn: "October 21, 2022",
+                    description: "Scrum Fundamentals Certified course is tailored to help anyone interested to know more about Scrum; learn about key concepts in Scrum as defined in the SBOK® Guide; and to get a basic understanding of how Scrum framework works in delivering successful projects.",
+                    badgeImage: "./assets/img/badges/scrumBadge.png",
+                    link: "https://www.scrumstudy.com/certification/verify?type=SFC&number=946203"
+                },
+                {
                     id: 2,
                     name: "Enterprise Design Thinking",
                     issuedBy: "IBM",
                     issuedIn: "October 3, 2022",
                     description: "The earner has acquired knowledge of applying Enterprise Design Thinking and its value. As a Practitioner, the badge earner finds opportunities to try it out in their every day work.",
-                    badgeImage: "./assets/img/badges/enterpriseDesignThinkingPractitioner.png",
+                    badgeImage: "./assets/img/badges/enterpriseDesignThinkingPractitionerBadge.png",
                     link: "https://www.credly.com/badges/a1f77261-6276-4d48-8a9d-33dfda2534e5/public_url"
                 },
                 {
@@ -53,7 +62,7 @@ createApp({
                     issuedBy: "MindHub",
                     issuedIn: "October 12, 2022",
                     description: "This person is capable of developing responsive web applications using HTML5, CSS3, Javascript, Bootstrap, Vue Js. and JAVA, through the most used frameworks and integrating third-party APIs. Likewise, it is capable of dealing with a client's requirement, analyzing it, working as a team and carrying out its development in a timely manner, complying with the best market practices and using agile methodologies.",
-                    badgeImage: "./assets/img/badges/javaFullStackDeveloper.png",
+                    badgeImage: "./assets/img/badges/mindHubJavaBadge.png",
                     link: "https://www.credly.com/badges/b08ac688-852f-4535-b23c-7cd35b9b77fa/public_url"
                 }
             ],
@@ -74,7 +83,13 @@ createApp({
 
         normalizeArraysText(arrayToNormalize){
             return arrayToNormalize.toString().replace(/,/g, ", ");
-        }
+        },
+
+        toggleCertificationDetails(cardFrontID){
+            let cardFront = document.getElementById(cardFrontID)
+            cardFront.classList.toggle("toggleZIndex")
+        },
+
 
     },
     computed: {},

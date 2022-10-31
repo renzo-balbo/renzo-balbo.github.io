@@ -27,36 +27,92 @@ body>div{
     color: #446C36;
 }
 
-.exampleDisplays{
-    width: 540px;
-    height: 720px;
+.certificationCard{
+    position: relative;
 }
 
-.mobileDisplays{
+.certificationFront{
     height: 400px;
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
+    width: 270px;
+    position: relative;
+    background-color: #1E1E1C;
+    border: 5px solid #252525;
 }
 
-.mobileDisplays :first-child{
-    align-self: flex-start;
+.toggleZIndex{
+    z-index: 1;
 }
 
-.mobile1{
-    width: 200px;
-    height: 245px;
+.certificationBack{
+    height: 400px;
+    width: 270px;
+    position: absolute;
+    top: 0;
+    border: 5px solid #1E1E1C;
+    background-color: #252525;
 }
 
-.mobile2{
-    width: 120px;
-    height: 245px;
+.certificationBack p{
+    font-size: small;
 }
 
-.desktopDisplayExample{
-    width: 230px;
+.certificationFullDescription{
+    height: 25%;
 }
 
-.projectDetailsHead{
-    height: 70px;
+.badgeImage{
+    height: 100px;
+    width: 100px;
+}
+
+.certificationData{
+    height: 250px;
+    width: 250px;
+}
+
+.certificationTitle{
+    font-size: larger;
+    text-align: center;
+    width: 100%;
+}
+
+
+
+
+@media (min-width: 992px){
+
+    .exampleDisplays{
+        width: 540px;
+        height: 720px;
+    }
+    
+    .mobileDisplays{
+        height: 400px;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+    }
+    
+    .mobileDisplays :first-child{
+        align-self: flex-start;
+    }
+    
+    .mobile1{
+        width: 200px;
+        height: 245px;
+    }
+    
+    .mobile2{
+        width: 120px;
+        height: 245px;
+    }
+    
+    .desktopDisplayExample{
+        width: 230px;
+    }
+    
+    .projectDetailsHead{
+        height: 70px;
+    }
+
 }

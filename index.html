@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- BOOTSTRAP  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <!-- CSS  -->
     <link rel="stylesheet" href="./assets/styles/index.css">
 
@@ -36,6 +36,7 @@
             <h5 class="col-11 tagTitle">
                 <<span>projects</span>>
             </h5>
+
             <!-- CONTENEDOR DE PROYECTOS  -->
             <section class="row col-10 flex-wrap gap-5 projectsContainer">
 
@@ -77,7 +78,7 @@
                         </div>
 
                         <img :src="project.images.desktop" class="img-fluid desktopDisplayExample" alt="" width="250">
-                        
+
                     </div>
 
                 </article>
@@ -89,19 +90,66 @@
 
             <!-- ABOUT  -->
 
-                <h5 class="col-11 tagTitle">
-                    <<span>about</span>>
-                </h5>
+            <h5 class="col-11 tagTitle">
+                <<span>about</span>>
+            </h5>
 
-                <h5 class="col-11 tagTitle">
-                    <<span>/about</span>>
-                </h5>
+            <h5 class="col-11 tagTitle">
+                <<span>/about</span>>
+            </h5>
 
 
             <!-- CERTIFICATIONS  -->
             <h5 class="col-11 tagTitle">
                 <<span>certifications</span>>
             </h5>
+            <!-- CONTENEDOR DE CERTIFICACIONES  -->
+            <section id="certificationsContainer" class=" col-12 col-lg-10 d-flex flex-column gap-3 justify-content-evenly flex-wrap flex-lg-row">
+
+                <!-- CADA CERTIFICACION  -->
+                <div v-for="certification in certifications" class="certificationCard">
+                    <!-- FRENTE  -->
+                    <div class="d-flex flex-column align-items-center certificationFront toggleZIndex" :id='"frontCertification"+certification.id' @click="toggleCertificationDetails('frontCertification'+certification.id)">
+                        
+                    <!-- IMAGEN DE LA MEDALLA  -->
+                    <img :src="certification.badgeImage" alt="badge"
+                        class="badgeImage mt-3">
+                        
+                        <!-- DETALLES DE LA CERTIFICACION  -->
+                        <article class="certificationData d-flex flex-wrap">
+                        <h3 class="text-center mt-2 certificationTitle">{{certification.name}}</h3>
+
+                        <p class="text-center mt-2">{{resumeCertificationDescription(certification.description)}}...</p>
+                        </article>
+                        
+                        <p>Tap to see details</p>
+                        
+                        
+                    </div>
+
+                    <!-- FONDO  -->
+                    <article class="d-flex flex-column align-items-center certificationBack justify-content-between"  @click="toggleCertificationDetails('frontCertification'+certification.id)">
+                        <div class="p-2">
+                            <p >{{certification.description}}</p>
+                        </div>
+                        <div class="text-center p-2 flex-column justify-content-between">
+                            <p >Issued by: {{certification.issuedBy}} at {{certification.issuedIn}}</p>
+                            <a :href="certification.link" target="_blank">
+                                <button>Certificate link</button>
+                            </a>
+                            <p>Tap to go back</p>
+                        </div>
+
+                    </article>
+
+
+
+
+
+
+                </div>
+
+            </section>
 
             <h5 class="col-11 tagTitle">
                 <<span>/certifications</span>>
@@ -135,6 +183,10 @@
 
 
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./js/index.js"></script>
 </body>
