@@ -65,6 +65,16 @@ body>div{
     width: 100px;
 }
 
+.certificationCard{
+    transition: .5s;
+}
+
+.certificationCard:hover{
+    transform: scale(1.05) !important;
+}
+
+
+
 .certificationData{
     height: 250px;
     width: 250px;
@@ -76,6 +86,28 @@ body>div{
     width: 100%;
 }
 
+textarea{
+    height: 150px;
+    resize: none;
+}
+#contactSecondPart :last-child{
+    width: 90px;
+}
+
+#socialsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.social{
+    position: relative;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+}
 
 
 
@@ -113,6 +145,36 @@ body>div{
     
     .projectDetailsHead{
         height: 70px;
+    }
+
+    #contactSecondPart{
+        height: 272px;
+    }
+
+    textarea{
+        height: 190px;
+    }
+
+    #contactSecondPart :last-child{
+        align-self: center;
+        justify-self:flex-end;
+    }
+
+    #socialsContainer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .social{
+        height: 200px;
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
     }
 
 }

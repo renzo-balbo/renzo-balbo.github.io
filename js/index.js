@@ -90,6 +90,10 @@ createApp({
             cardFront.classList.toggle("toggleZIndex")
         },
 
+        sendContactEmail(){
+
+        },
+
 
     },
     computed: {},
