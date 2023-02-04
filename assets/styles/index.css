@@ -76,6 +76,7 @@ main {
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 5px;
+    text-align: center;
 }
 
 /* EXPERIENCE & ACHIEVEMENTS */
@@ -156,6 +157,77 @@ footer {
 }
 
 
-/* @media(min-width:680px){
+@media(min-width:768px){
 
-} */
+    /* HEADER */
+
+    #headerNav{
+        height: 70px;
+    }
+
+    #navLogo{
+        width: 70px;
+    }
+
+    /* BANNER  */
+
+    #fullBanner{
+        height: 350px;
+        background-image: url(../img/banner.jpeg);
+        background-position-y: 0px;
+        background-position-x: 250px;
+        background-repeat: no-repeat;
+        background-size: 70%;
+    }
+
+    #banner{
+        padding-top: 50px;
+        background-color: whitesmoke;
+        width: 350px;
+        height: 200px;
+    }
+
+    #banner>*{
+        width: 100%;
+    }
+
+    #underBanner{
+        padding-top: 50px;
+        background-color: whitesmoke;
+        width: 350px;
+        height: 150px;
+    }
+
+    /* TECHNOLOGIES */
+
+    #certificationsTechnologies{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #technologies{
+        width: 80%;
+    }
+
+    .techLogo{
+        margin: 10px;
+    }
+
+    #certifications{
+        width: 70%;
+    }
+
+    /* CONTACT */
+
+    #contact{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #contact button{
+        width: 100px;
+    }
+
+
+}
