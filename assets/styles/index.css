@@ -13,11 +13,11 @@ header {
     background-color: red;
     height: 100px;
     padding: 0px, 25px;
-    position:sticky ;
+    position: sticky;
     top: 0;
 }
 
-#headerNav{
+#headerNav {
     background-color: yellow;
     height: 54px;
     width: 87%;
@@ -25,7 +25,7 @@ header {
     display: flex;
 }
 
-#navLogo{
+#navLogo {
     background-color: green;
     height: 100%;
     width: 52px;
@@ -43,7 +43,7 @@ main {
 
 /* BANNER */
 
-#banner{
+#banner {
     display: flex;
     flex-wrap: wrap;
     background-color: aqua;
@@ -51,7 +51,7 @@ main {
     justify-content: space-evenly;
 }
 
-#bannerText{
+#bannerText {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -59,18 +59,18 @@ main {
     align-items: flex-start;
 }
 
-#bannerPic{
+#bannerPic {
     height: 150px;
     width: 150px;
     background-image: url(../img/banner.jpeg);
-    background-position-x: -35px ;
+    background-position-x: -35px;
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 360px;
     border: solid 1px black;
 }
 
-#underBanner{
+#underBanner {
     background-color: pink;
     display: flex;
     flex-wrap: wrap;
@@ -81,7 +81,7 @@ main {
 
 /* EXPERIENCE & ACHIEVEMENTS */
 
-#experienceAchievements{
+#experienceAchievements {
     background-color: wheat;
     display: flex;
     flex-direction: column;
@@ -89,38 +89,38 @@ main {
 
 /* CERTIFICATIONS & TECHNOLOGIES */
 
-#certificationsTechnologies{
+#certificationsTechnologies {
     background-color: burlywood;
 }
 
-#technologies{
+#technologies {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 5px;
 }
 
-.techLogo{
+.techLogo {
     margin: 3px;
     width: 70px;
     height: 70px;
 }
 
-#certifications{
+#certifications {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin-bottom: 10px;
 }
 
-#certifications img{
+#certifications img {
     height: 90px;
     width: 90px;
 }
 
 /* CONTACT */
 
-#contact{
+#contact {
     background-color: red;
     display: flex;
     flex-wrap: wrap;
@@ -140,7 +140,7 @@ footer {
     padding-top: 10px;
 }
 
-#socials{
+#socials {
 
     display: flex;
     justify-content: space-evenly;
@@ -151,27 +151,31 @@ footer {
 
 }
 
-.socialLogos{
+.socialLogos {
     width: 30px;
     height: 30px;
 }
 
+#email{
+    display: none;
+}
 
-@media(min-width:768px){
+
+@media(min-width:768px) {
 
     /* HEADER */
 
-    #headerNav{
+    #headerNav {
         height: 70px;
     }
 
-    #navLogo{
+    #navLogo {
         width: 70px;
     }
 
     /* BANNER  */
 
-    #fullBanner{
+    #fullBanner {
         height: 350px;
         background-image: url(../img/banner.jpeg);
         background-position-y: 0px;
@@ -180,18 +184,18 @@ footer {
         background-size: 70%;
     }
 
-    #banner{
+    #banner {
         padding-top: 50px;
         background-color: whitesmoke;
         width: 350px;
         height: 200px;
     }
 
-    #banner>*{
+    #banner>* {
         width: 100%;
     }
 
-    #underBanner{
+    #underBanner {
         padding-top: 50px;
         background-color: whitesmoke;
         width: 350px;
@@ -200,34 +204,88 @@ footer {
 
     /* TECHNOLOGIES */
 
-    #certificationsTechnologies{
+    #certificationsTechnologies {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
 
-    #technologies{
+    #technologies {
         width: 80%;
     }
 
-    .techLogo{
+    .techLogo {
         margin: 10px;
     }
 
-    #certifications{
+    #certifications {
         width: 70%;
     }
 
     /* CONTACT */
 
-    #contact{
+    #contact {
         flex-direction: column;
         align-items: center;
     }
 
-    #contact button{
+    #contact button {
         width: 100px;
     }
 
+
+}
+
+@media(min-width:992px) {
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #fullBanner {
+        height: 350px;
+        background-image: url(../img/banner.jpeg);
+        background-position-y: 0px;
+        background-position-x: 350px;
+        background-repeat: no-repeat;
+        background-size: 70%;
+    }
+
+    #experienceAchievements {
+        align-self: center;
+        width: 80%;
+    }
+
+    #certificationsTechnologies {
+        width: 80%;
+        align-self: center;
+    }
+
+    #contact{
+        margin-top: 20px;
+        width: 80%;
+        align-self: center;
+    }
+
+    #socials {
+        flex-direction: column;
+        position: fixed;
+        left: -80px;
+        bottom:50px;
+    }
+    
+    .socialLogos {
+        margin-bottom: 50px;
+    }
+
+    #email{
+        display: inline;
+        flex-direction: column;
+        position: fixed;
+        right: -50px;
+        bottom:170px;
+        transform:rotate(90deg);
+    }
 
 }
