@@ -4,242 +4,158 @@
     box-sizing: border-box;
 }
 
-body>div {
-    background-color: #333333;
+/* HEADER */
 
-    color: #BDC1C6;
-}
-
-.tagTitle {
-    color: #3A6AC8;
-}
-
-.project {
-    background-color: #1E1E1C;
-    border: 5px solid #252525;
-}
-
-.projectTitle {
-    color: #D0D2C8;
-}
-
-.projectType {
-    color: #446C36;
-}
-
-.certificationCard {
-    position: relative;
-}
-
-.certificationFront {
-    height: 400px;
-    width: 270px;
-    position: relative;
-    background-color: #1E1E1C;
-    border: 5px solid #252525;
-}
-
-.toggleZIndex {
-    z-index: 1;
-}
-
-.certificationBack {
-    height: 400px;
-    width: 270px;
-    position: absolute;
-    top: 0;
-    border: 5px solid #1E1E1C;
-    background-color: #252525;
-}
-
-.certificationBack p {
-    font-size: small;
-}
-
-.certificationFullDescription {
-    height: 25%;
-}
-
-.badgeImage {
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
     height: 100px;
-    width: 100px;
+    padding: 0px, 25px;
+    position:sticky ;
+    top: 0;
 }
 
-.certificationCard {
-    transition: .5s;
+#headerNav{
+    background-color: yellow;
+    height: 54px;
+    width: 87%;
+    padding: 1px;
+    display: flex;
 }
 
-.certificationCard:hover {
-    transform: scale(1.05) !important;
+#navLogo{
+    background-color: green;
+    height: 100%;
+    width: 52px;
 }
 
+/* MAIN */
 
-
-.certificationData {
-    height: 250px;
-    width: 250px;
+main {
+    background-color: blue;
+    min-height: 100vh;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
 }
 
-.certificationTitle {
-    font-size: larger;
-    text-align: center;
-    width: 100%;
+/* BANNER */
+
+#banner{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: aqua;
+    padding: 5px;
+    justify-content: space-evenly;
 }
 
-textarea {
+#bannerText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    align-items: flex-start;
+}
+
+#bannerPic{
     height: 150px;
-    resize: none;
+    width: 150px;
+    background-image: url(../img/banner.jpeg);
+    background-position-x: -35px ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 360px;
+    border: solid 1px black;
 }
 
-#contactSecondPart :last-child {
-    width: 90px;
-}
-
-#socialsContainer {
+#underBanner{
+    background-color: pink;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    align-items: center;
+    padding: 5px;
 }
 
-.social {
-    position: relative;
-    height: 100px;
-    width: 100px;
+/* EXPERIENCE & ACHIEVEMENTS */
+
+#experienceAchievements{
+    background-color: wheat;
+    display: flex;
+    flex-direction: column;
+}
+
+/* CERTIFICATIONS & TECHNOLOGIES */
+
+#certificationsTechnologies{
+    background-color: burlywood;
+}
+
+#technologies{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 5px;
+}
+
+.techLogo{
+    margin: 3px;
+    width: 70px;
+    height: 70px;
+}
+
+#certifications{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}
+
+#certifications img{
+    height: 90px;
+    width: 90px;
+}
+
+/* CONTACT */
+
+#contact{
+    background-color: red;
+    display: flex;
+    flex-wrap: wrap;
     text-align: center;
-    text-decoration: none;
+    justify-content: center;
+    padding: 10px;
 }
 
-button {
-    --border-radius: 15px;
-    --border-width: 4px;
-    appearance: none;
-    position: relative;
-    padding: 1em 2em;
-    border: 0;
-    background-color: #212121;
-    font-family: "Roboto", Arial, "Segoe UI", sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-    color: #fff;
-    /* z-index: 2; */
+/* FOOTER */
+
+footer {
+    background-color: cadetblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
 }
 
-button::after {
-    --m-i: linear-gradient(#000, #000);
-    --m-o: content-box, padding-box;
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
+#socials{
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     width: 100%;
-    height: 100%;
-    padding: var(--border-width);
-    border-radius: var(--border-radius);
-    background-image: conic-gradient(#488cfb,
-            #29dbbc,
-            #ddf505,
-            #ff9f0e,
-            #e440bb,
-            #655adc,
-            #488cfb);
-    -webkit-mask-image: var(--m-i), var(--m-i);
-    mask-image: var(--m-i), var(--m-i);
-    -webkit-mask-origin: var(--m-o);
-    mask-origin: var(--m-o);
-    -webkit-mask-clip: var(--m-o);
-    mask-composite: exclude;
-    -webkit-mask-composite: destination-out;
-    filter: hue-rotate(0);
-    animation: rotate-hue linear 500ms infinite;
-    animation-play-state: paused;
+    max-width: 270px;
+    margin: 0px, auto, 10px;
+
 }
 
-button:hover::after {
-    animation-play-state: running;
-}
-
-@keyframes rotate-hue {
-    to {
-        filter: hue-rotate(1turn);
-    }
-}
-
-button,
-button::after {
-    box-sizing: border-box;
-}
-
-button:active {
-    --border-width: 5px;
+.socialLogos{
+    width: 30px;
+    height: 30px;
 }
 
 
+/* @media(min-width:680px){
 
-@media (min-width: 992px) {
-
-    .exampleDisplays {
-        width: 540px;
-        height: 720px;
-    }
-
-    .mobileDisplays {
-        height: 400px;
-        display: flex;
-        justify-content: space-around;
-        align-items: flex-end;
-    }
-
-    .mobileDisplays :first-child {
-        align-self: flex-start;
-    }
-
-    .mobile1 {
-        width: 200px;
-        height: 245px;
-    }
-
-    .mobile2 {
-        width: 120px;
-        height: 245px;
-    }
-
-    .desktopDisplayExample {
-        width: 230px;
-    }
-
-    .projectDetailsHead {
-        height: 70px;
-    }
-
-    #contactSecondPart {
-        height: 272px;
-    }
-
-    textarea {
-        height: 190px;
-    }
-
-    #contactSecondPart :last-child {
-        align-self: center;
-        justify-self: flex-end;
-    }
-
-    #socialsContainer {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-
-    .social {
-        height: 200px;
-        width: 200px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-decoration: none;
-    }
-
-}
+} */
